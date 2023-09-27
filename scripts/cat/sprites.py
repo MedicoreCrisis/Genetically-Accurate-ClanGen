@@ -198,11 +198,11 @@ sprites = Sprites(spriteSize)
 #tiles = Sprites(64)
 
 for x in [
-    'lineart', 'singlecolours', 'speckledcolours', 'tabbycolours',
+    'lineart', 'solidcolours', 'spottedcolours', 'braidedcolours',
     'whitepatches', 'eyes', 'eyes2', 'skin', 'scars', 'missingscars',
     'collars', 'bellcollars', 'bowcollars', 'nyloncollars',
-    'bengalcolours', 'marbledcolours', 'rosettecolours', 'smokecolours', 'tickedcolours', 
-    'mackerelcolours', 'classiccolours', 'sokokecolours', 'agouticolours', 'singlestripecolours', 
+    'rosettedcolours', 'marbledcolours', 'smokecolours', 'tickedcolours', 
+    'mackerelcolours', 'classiccolours', 'brokenbraidedcolours', 'agouticolours', 'brokenmackerelcolours', 
     'shadersnewwhite', 'lineartdead', 'tortiepatchesmasks', 
     'medcatherbs', 'lineartdf', 'lightingnew', 'fademask',
     'fadestarclan', 'fadedarkforest'
@@ -264,97 +264,114 @@ for a, i in enumerate(['HEART', 'LILTWO', 'GLASS', 'MOORISH', 'SEPIAPOINT', 'MIN
 for a, i in enumerate(['BOOTS', 'MISS', 'COW', 'COWTWO', 'BUB']):
     sprites.make_group('whitepatches', (a, 6), 'white' + i)
 
-# single (solid)
-for a, i in enumerate(['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK']):
-    sprites.make_group('singlecolours', (a, 0), f'single{i}')
-for a, i in enumerate(['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA']):
-    sprites.make_group('singlecolours', (a, 1), f'single{i}')
-for a, i in enumerate(['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']):
-    sprites.make_group('singlecolours', (a, 2), f'single{i}')
-# tabby
-for a, i in enumerate(['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK']):
-    sprites.make_group('tabbycolours', (a, 0), f'tabby{i}')
-for a, i in enumerate(['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA']):
-    sprites.make_group('tabbycolours', (a, 1), f'tabby{i}')
-for a, i in enumerate(['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']):
-    sprites.make_group('tabbycolours', (a, 2), f'tabby{i}')
-# marbled
-for a, i in enumerate(['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK']):
-    sprites.make_group('marbledcolours', (a, 0), f'marbled{i}')
-for a, i in enumerate(['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA']):
-    sprites.make_group('marbledcolours', (a, 1), f'marbled{i}')
-for a, i in enumerate(['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']):
-    sprites.make_group('marbledcolours', (a, 2), f'marbled{i}')
-# rosette
-for a, i in enumerate(['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK']):
-    sprites.make_group('rosettecolours', (a, 0), f'rosette{i}')
-for a, i in enumerate(['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA']):
-    sprites.make_group('rosettecolours', (a, 1), f'rosette{i}')
-for a, i in enumerate(['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']):
-    sprites.make_group('rosettecolours', (a, 2), f'rosette{i}')
-# smoke
-for a, i in enumerate(['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK']):
-    sprites.make_group('smokecolours', (a, 0), f'smoke{i}')
-for a, i in enumerate(['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA']):
-    sprites.make_group('smokecolours', (a, 1), f'smoke{i}')
-for a, i in enumerate(['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']):
-    sprites.make_group('smokecolours', (a, 2), f'smoke{i}')
-# ticked
-for a, i in enumerate(['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK']):
-    sprites.make_group('tickedcolours', (a, 0), f'ticked{i}')
-for a, i in enumerate(['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA']):
-    sprites.make_group('tickedcolours', (a, 1), f'ticked{i}')
-for a, i in enumerate(['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']):
-    sprites.make_group('tickedcolours', (a, 2), f'ticked{i}')
-# speckled
-for a, i in enumerate(['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK']):
-    sprites.make_group('speckledcolours', (a, 0), f'speckled{i}')
-for a, i in enumerate(['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA']):
-    sprites.make_group('speckledcolours', (a, 1), f'speckled{i}')
-for a, i in enumerate(['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']):
-    sprites.make_group('speckledcolours', (a, 2), f'speckled{i}')
-# bengal
-for a, i in enumerate(['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK']):
-    sprites.make_group('bengalcolours', (a, 0), f'bengal{i}')
-for a, i in enumerate(['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA']):
-    sprites.make_group('bengalcolours', (a, 1), f'bengal{i}')
-for a, i in enumerate(['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']):
-    sprites.make_group('bengalcolours', (a, 2), f'bengal{i}')
+# solid
+for a, i in enumerate(['GHOST', 'BLACK', 'COLDBLUE', 'WARMBLUE', 'GINGER', 'HOTGINGER', 'CHOCOLATE', 'CINNAMON']):
+    sprites.make_group('solidcolours', (a, 0), f'solid{i}')
+for a, i in enumerate(['CREAM', 'LILAC', 'FAWN', 'APRICOT', 'CARMBLUE', 'CARMLILAC', 'CARMFAWN']):
+    sprites.make_group('solidcolours', (a, 1), f'solid{i}')
+for a, i in enumerate(['SILVER', 'SILVERBLUE', 'CAMEO', 'SILVERCHOCOLATE', 'SILVERCINNAMON', 'SILVERCREAM']):
+    sprites.make_group('solidcolours', (a, 2), f'solid{i}')
+for a, i in enumerate(['SILVERLILAC', 'SILVERBFAWN', 'SILVERAPRICOT', 'SILVERCARMBLUE', 'SILVERCARMLILAC', 'SILVERCARMFAWN']):
+    sprites.make_group('solidcolours', (a, 3), f'solid{i}')
 # mackerel
-for a, i in enumerate(['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK']):
+for a, i in enumerate(['GHOST', 'BLACK', 'COLDBLUE', 'WARMBLUE', 'GINGER', 'HOTGINGER', 'CHOCOLATE', 'CINNAMON']):
     sprites.make_group('mackerelcolours', (a, 0), f'mackerel{i}')
-for a, i in enumerate(['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA']):
+for a, i in enumerate(['CREAM', 'LILAC', 'FAWN', 'APRICOT', 'CARMBLUE', 'CARMLILAC', 'CARMFAWN']):
     sprites.make_group('mackerelcolours', (a, 1), f'mackerel{i}')
-for a, i in enumerate(['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']):
+for a, i in enumerate(['SILVER', 'SILVERBLUE', 'CAMEO', 'SILVERCHOCOLATE', 'SILVERCINNAMON', 'SILVERCREAM']):
     sprites.make_group('mackerelcolours', (a, 2), f'mackerel{i}')
+for a, i in enumerate(['SILVERLILAC', 'SILVERBFAWN', 'SILVERAPRICOT', 'SILVERCARMBLUE', 'SILVERCARMLILAC', 'SILVERCARMFAWN']):
+    sprites.make_group('mackerelcolours', (a, 3), f'mackerel{i}')
+# marbled
+for a, i in enumerate(['GHOST', 'BLACK', 'COLDBLUE', 'WARMBLUE', 'GINGER', 'HOTGINGER', 'CHOCOLATE', 'CINNAMON']):
+    sprites.make_group('marbledcolours', (a, 0), f'marbled{i}')
+for a, i in enumerate(['CREAM', 'LILAC', 'FAWN', 'APRICOT', 'CARMBLUE', 'CARMLILAC', 'CARMFAWN']):
+    sprites.make_group('marbledcolours', (a, 1), f'marbled{i}')
+for a, i in enumerate(['SILVER', 'SILVERBLUE', 'CAMEO', 'SILVERCHOCOLATE', 'SILVERCINNAMON', 'SILVERCREAM']):
+    sprites.make_group('marbledcolours', (a, 2), f'marbled{i}')
+for a, i in enumerate(['SILVERLILAC', 'SILVERBFAWN', 'SILVERAPRICOT', 'SILVERCARMBLUE', 'SILVERCARMLILAC', 'SILVERCARMFAWN']):
+    sprites.make_group('marbledcolours', (a, 3), f'marbled{i}')
+# smoke
+for a, i in enumerate(['GHOST', 'BLACK', 'COLDBLUE', 'WARMBLUE', 'GINGER', 'HOTGINGER', 'CHOCOLATE', 'CINNAMON']):
+    sprites.make_group('smokecolours', (a, 0), f'smoke{i}')
+for a, i in enumerate(['CREAM', 'LILAC', 'FAWN', 'APRICOT', 'CARMBLUE', 'CARMLILAC', 'CARMFAWN']):
+    sprites.make_group('smokecolours', (a, 1), f'smoke{i}')
+for a, i in enumerate(['SILVER', 'SILVERBLUE', 'CAMEO', 'SILVERCHOCOLATE', 'SILVERCINNAMON', 'SILVERCREAM']):
+    sprites.make_group('smokecolours', (a, 2), f'smoke{i}')
+for a, i in enumerate(['SILVERLILAC', 'SILVERBFAWN', 'SILVERAPRICOT', 'SILVERCARMBLUE', 'SILVERCARMLILAC', 'SILVERCARMFAWN']):
+    sprites.make_group('smokecolours', (a, 3), f'smoke{i}')
+# ticked
+for a, i in enumerate(['GHOST', 'BLACK', 'COLDBLUE', 'WARMBLUE', 'GINGER', 'HOTGINGER', 'CHOCOLATE', 'CINNAMON']):
+    sprites.make_group('tickedolours', (a, 0), f'ticked{i}')
+for a, i in enumerate(['CREAM', 'LILAC', 'FAWN', 'APRICOT', 'CARMBLUE', 'CARMLILAC', 'CARMFAWN']):
+    sprites.make_group('tickedcolours', (a, 1), f'ticked{i}')
+for a, i in enumerate(['SILVER', 'SILVERBLUE', 'CAMEO', 'SILVERCHOCOLATE', 'SILVERCINNAMON', 'SILVERCREAM']):
+    sprites.make_group('tickedcolours', (a, 2), f'ticked{i}')
+for a, i in enumerate(['SILVERLILAC', 'SILVERBFAWN', 'SILVERAPRICOT', 'SILVERCARMBLUE', 'SILVERCARMLILAC', 'SILVERCARMFAWN']):
+    sprites.make_group('tickedcolours', (a, 3), f'ticked{i}')
+# spotted
+for a, i in enumerate(['GHOST', 'BLACK', 'COLDBLUE', 'WARMBLUE', 'GINGER', 'HOTGINGER', 'CHOCOLATE', 'CINNAMON']):
+    sprites.make_group('spottedcolours', (a, 0), f'spotted{i}')
+for a, i in enumerate(['CREAM', 'LILAC', 'FAWN', 'APRICOT', 'CARMBLUE', 'CARMLILAC', 'CARMFAWN']):
+    sprites.make_group('spottedcolours', (a, 1), f'spotted{i}')
+for a, i in enumerate(['SILVER', 'SILVERBLUE', 'CAMEO', 'SILVERCHOCOLATE', 'SILVERCINNAMON', 'SILVERCREAM']):
+    sprites.make_group('spottedcolours', (a, 2), f'spotted{i}')
+for a, i in enumerate(['SILVERLILAC', 'SILVERBFAWN', 'SILVERAPRICOT', 'SILVERCARMBLUE', 'SILVERCARMLILAC', 'SILVERCARMFAWN']):
+    sprites.make_group('spottedcolours', (a, 3), f'spotted{i}')
+# rosetted
+for a, i in enumerate(['GHOST', 'BLACK', 'COLDBLUE', 'WARMBLUE', 'GINGER', 'HOTGINGER', 'CHOCOLATE', 'CINNAMON']):
+    sprites.make_group('rosettedcolours', (a, 0), f'rosetted{i}')
+for a, i in enumerate(['CREAM', 'LILAC', 'FAWN', 'APRICOT', 'CARMBLUE', 'CARMLILAC', 'CARMFAWN']):
+    sprites.make_group('rosettedcolours', (a, 1), f'rosetted{i}')
+for a, i in enumerate(['SILVER', 'SILVERBLUE', 'CAMEO', 'SILVERCHOCOLATE', 'SILVERCINNAMON', 'SILVERCREAM']):
+    sprites.make_group('rosettedcolours', (a, 2), f'rosetted{i}')
+for a, i in enumerate(['SILVERLILAC', 'SILVERBFAWN', 'SILVERAPRICOT', 'SILVERCARMBLUE', 'SILVERCARMLILAC', 'SILVERCARMFAWN']):
+    sprites.make_group('rosettedcolours', (a, 3), f'rosetted{i}')
 # classic
-for a, i in enumerate(['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK']):
+for a, i in enumerate(['GHOST', 'BLACK', 'COLDBLUE', 'WARMBLUE', 'GINGER', 'HOTGINGER', 'CHOCOLATE', 'CINNAMON']):
     sprites.make_group('classiccolours', (a, 0), f'classic{i}')
-for a, i in enumerate(['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA']):
+for a, i in enumerate(['CREAM', 'LILAC', 'FAWN', 'APRICOT', 'CARMBLUE', 'CARMLILAC', 'CARMFAWN']):
     sprites.make_group('classiccolours', (a, 1), f'classic{i}')
-for a, i in enumerate(['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']):
+for a, i in enumerate(['SILVER', 'SILVERBLUE', 'CAMEO', 'SILVERCHOCOLATE', 'SILVERCINNAMON', 'SILVERCREAM']):
     sprites.make_group('classiccolours', (a, 2), f'classic{i}')
-# sokoke
-for a, i in enumerate(['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK']):
-    sprites.make_group('sokokecolours', (a, 0), f'sokoke{i}')
-for a, i in enumerate(['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA']):
-    sprites.make_group('sokokecolours', (a, 1), f'sokoke{i}')
-for a, i in enumerate(['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']):
-    sprites.make_group('sokokecolours', (a, 2), f'sokoke{i}')
+for a, i in enumerate(['SILVERLILAC', 'SILVERBFAWN', 'SILVERAPRICOT', 'SILVERCARMBLUE', 'SILVERCARMLILAC', 'SILVERCARMFAWN']):
+    sprites.make_group('classiccolours', (a, 3), f'classic{i}')
 # agouti
-for a, i in enumerate(['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK']):
+for a, i in enumerate(['GHOST', 'BLACK', 'COLDBLUE', 'WARMBLUE', 'GINGER', 'HOTGINGER', 'CHOCOLATE', 'CINNAMON']):
     sprites.make_group('agouticolours', (a, 0), f'agouti{i}')
-for a, i in enumerate(['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA']):
+for a, i in enumerate(['CREAM', 'LILAC', 'FAWN', 'APRICOT', 'CARMBLUE', 'CARMLILAC', 'CARMFAWN']):
     sprites.make_group('agouticolours', (a, 1), f'agouti{i}')
-for a, i in enumerate(['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']):
+for a, i in enumerate(['SILVER', 'SILVERBLUE', 'CAMEO', 'SILVERCHOCOLATE', 'SILVERCINNAMON', 'SILVERCREAM']):
     sprites.make_group('agouticolours', (a, 2), f'agouti{i}')
-# singlestripe
-for a, i in enumerate(['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK']):
-    sprites.make_group('singlestripecolours', (a, 0), f'singlestripe{i}')
-for a, i in enumerate(['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA']):
-    sprites.make_group('singlestripecolours', (a, 1), f'singlestripe{i}')
-for a, i in enumerate(['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']):
-    sprites.make_group('singlestripecolours', (a, 2), f'singlestripe{i}')
+for a, i in enumerate(['SILVERLILAC', 'SILVERBFAWN', 'SILVERAPRICOT', 'SILVERCARMBLUE', 'SILVERCARMLILAC', 'SILVERCARMFAWN']):
+    sprites.make_group('agouticolours', (a, 3), f'agouti{i}')
+# brokenmackerel
+for a, i in enumerate(['GHOST', 'BLACK', 'COLDBLUE', 'WARMBLUE', 'GINGER', 'HOTGINGER', 'CHOCOLATE', 'CINNAMON']):
+    sprites.make_group('brokenmackerelcolours', (a, 0), f'brokenmackerel{i}')
+for a, i in enumerate(['CREAM', 'LILAC', 'FAWN', 'APRICOT', 'CARMBLUE', 'CARMLILAC', 'CARMFAWN']):
+    sprites.make_group('brokenmackerelcolours', (a, 1), f'brokenmackerel{i}')
+for a, i in enumerate(['SILVER', 'SILVERBLUE', 'CAMEO', 'SILVERCHOCOLATE', 'SILVERCINNAMON', 'SILVERCREAM']):
+    sprites.make_group('brokenmackerelcolours', (a, 2), f'brokenmackerel{i}')
+for a, i in enumerate(['SILVERLILAC', 'SILVERBFAWN', 'SILVERAPRICOT', 'SILVERCARMBLUE', 'SILVERCARMLILAC', 'SILVERCARMFAWN']):
+    sprites.make_group('brokenmackerelcolours', (a, 3), f'brokenmackerel{i}')
+# braided
+for a, i in enumerate(['GHOST', 'BLACK', 'COLDBLUE', 'WARMBLUE', 'GINGER', 'HOTGINGER', 'CHOCOLATE', 'CINNAMON']):
+    sprites.make_group('braidedcolours', (a, 0), f'braided{i}')
+for a, i in enumerate(['CREAM', 'LILAC', 'FAWN', 'APRICOT', 'CARMBLUE', 'CARMLILAC', 'CARMFAWN']):
+    sprites.make_group('braidedcolours', (a, 1), f'braided{i}')
+for a, i in enumerate(['SILVER', 'SILVERBLUE', 'CAMEO', 'SILVERCHOCOLATE', 'SILVERCINNAMON', 'SILVERCREAM']):
+    sprites.make_group('braidedcolours', (a, 2), f'braided{i}')
+for a, i in enumerate(['SILVERLILAC', 'SILVERBFAWN', 'SILVERAPRICOT', 'SILVERCARMBLUE', 'SILVERCARMLILAC', 'SILVERCARMFAWN']):
+    sprites.make_group('braidedcolours', (a, 3), f'braided{i}')
+# brokenbraided
+for a, i in enumerate(['GHOST', 'BLACK', 'COLDBLUE', 'WARMBLUE', 'GINGER', 'HOTGINGER', 'CHOCOLATE', 'CINNAMON']):
+    sprites.make_group('brokenbraidedcolours', (a, 0), f'brokenbraided{i}')
+for a, i in enumerate(['CREAM', 'LILAC', 'FAWN', 'APRICOT', 'CARMBLUE', 'CARMLILAC', 'CARMFAWN']):
+    sprites.make_group('brokenbraidedcolours', (a, 1), f'brokenbraided{i}')
+for a, i in enumerate(['SILVER', 'SILVERBLUE', 'CAMEO', 'SILVERCHOCOLATE', 'SILVERCINNAMON', 'SILVERCREAM']):
+    sprites.make_group('brokenbraidedcolours', (a, 2), f'brokenbraided{i}')
+for a, i in enumerate(['SILVERLILAC', 'SILVERBFAWN', 'SILVERAPRICOT', 'SILVERCARMBLUE', 'SILVERCARMLILAC', 'SILVERCARMFAWN']):
+    sprites.make_group('brokenbraidedcolours', (a, 3), f'brokenbraided{i}')
     
 # new new torties
 for a, i in enumerate(['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH', 'HALF', 'STREAK', 'MASK']):

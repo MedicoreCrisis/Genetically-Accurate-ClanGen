@@ -153,7 +153,7 @@ class Name():
 
     # Generate possible suffix
     def give_suffix(self, pelt, biome, tortiepattern):
-        if pelt is None or pelt == 'SingleColour':
+        if pelt is None or pelt == 'Solid':
             self.suffix = random.choice(self.names_dict["normal_suffixes"])
         else:
             named_after_pelt = not random.getrandbits(2)  # Chance for True is '1/8'.

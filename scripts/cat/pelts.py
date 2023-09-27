@@ -10,46 +10,48 @@ from scripts.game_structure.game_essentials import game
 class Pelt():
     
     sprites_names = {
-        "SingleColour": 'single',
-        'TwoColour': 'single',
-        'Tabby': 'tabby',
+        "Solid": 'solid',
+        'Bicolor': 'solid',
+        'Mackerel': 'mackerel',
         'Marbled': 'marbled',
-        'Rosette': 'rosette',
         'Smoke': 'smoke',
         'Ticked': 'ticked',
-        'Speckled': 'speckled',
-        'Bengal': 'bengal',
-        'Mackerel': 'mackerel',
+        'Spotted': 'spotted',
+        'Rosetted': 'rosetted',
         'Classic': 'classic',
-        'Sokoke': 'sokoke',
         'Agouti': 'agouti',
-        'Singlestripe': 'singlestripe',
+        'BrokenMackerel': 'brokenmackerel',
+        'Braided': 'braided',
+        'BrokenBraided': 'brokenbraided',
         'Tortie': None,
         'Calico': None,
     }
     
     # ATTRIBUTES, including non-pelt related
     pelt_colours = [
-        'WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK', 'CREAM', 'PALEGINGER',
-        'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA', 'LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN',
-        'CHOCOLATE'
+        'GHOST', 'BLACK', 'COLDBLUE', 'WARMBLUE', 'GINGER', 'HOTGINGER', 'CHOCOLATE', 'CINNAMON', 'CREAM',
+        'LILAC', 'FAWN', 'APRICOT', 'CARMBLUE', 'CARMLILAC', 'CARMFAWN', 'SILVER', 'SILVERBLUE', 'CAMEO',
+        'SILVERCHOCOLATE', 'SILVERCINNAMON', 'SILVERCREAM', 'SILVERLILAC', 'SILVERFAWN', 'SILVERAPRICOT', 'SILVERCARMBLUE',
+        'SILVERCARMLILAC','SILVERCARMFAWN'
     ]
     pelt_c_no_white = [
-        'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK', 'CREAM', 'PALEGINGER',
-        'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA', 'LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN',
-        'CHOCOLATE'
+        'GHOST', 'BLACK', 'COLDBLUE', 'WARMBLUE', 'GINGER', 'HOTGINGER', 'CHOCOLATE', 'CINNAMON', 'CREAM',
+        'LILAC', 'FAWN', 'APRICOT', 'CARMBLUE', 'CARMLILAC', 'CARMFAWN', 'SILVER', 'SILVERBLUE', 'CAMEO',
+        'SILVERCHOCOLATE', 'SILVERCINNAMON', 'SILVERCREAM', 'SILVERLILAC', 'SILVERFAWN', 'SILVERAPRICOT', 'SILVERCARMBLUE',
+        'SILVERCARMLILAC','SILVERCARMFAWN'
     ]
     pelt_c_no_bw = [
-        'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'CREAM', 'PALEGINGER',
-        'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA', 'LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN',
-        'CHOCOLATE'
+        'COLDBLUE', 'WARMBLUE', 'GINGER', 'HOTGINGER', 'CHOCOLATE', 'CINNAMON', 'CREAM',
+        'LILAC', 'FAWN', 'APRICOT', 'CARMBLUE', 'CARMLILAC', 'CARMFAWN', 'SILVER', 'SILVERBLUE', 'CAMEO',
+        'SILVERCHOCOLATE', 'SILVERCINNAMON', 'SILVERCREAM', 'SILVERLILAC', 'SILVERFAWN', 'SILVERAPRICOT', 'SILVERCARMBLUE',
+        'SILVERCARMLILAC','SILVERCARMFAWN'
     ]
 
     tortiepatterns = ['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH', 'MINIMALONE', 'MINIMALTWO', 'MINIMALTHREE', 'MINIMALFOUR', 'HALF',
                     'OREO', 'SWOOP', 'MOTTLED', 'SIDEMASK', 'EYEDOT', 'BANDANA', 'PACMAN', 'STREAMSTRIKE', 'ORIOLE', 'CHIMERA', 'DAUB', 'EMBER', 'BLANKET',
                     'ROBIN', 'BRINDLE', 'PAIGE', 'ROSETAIL', 'SAFI', 'SMUDGED', 'DAPPLENIGHT', 'STREAK', 'MASK', 'CHEST', 'ARMTAIL']
-    tortiebases = ['single', 'tabby', 'bengal', 'marbled', 'ticked', 'smoke', 'rosette', 'speckled', 'mackerel',
-                'classic', 'sokoke', 'agouti', 'singlestripe']
+    tortiebases = ['solid', 'mackerel', 'marbled', 'rosetted', 'ticked', 'smoke', 'braided', 'spotted', 'brokenbraided',
+                'classic', 'brokenmackerel', 'agouti']
 
     pelt_length = ["short", "medium", "long"]
     eye_colours = ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'GREY', 'CYAN', 'EMERALD', 'PALEBLUE', 
@@ -86,24 +88,37 @@ class Pelt():
         "BLACKNYLON", "SPIKESNYLON", "WHITENYLON", "PINKNYLON", "PURPLENYLON", "MULTINYLON", "INDIGONYLON",
     ]
 
-    tabbies = ["Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti"]
-    spotted = ["Speckled", "Rosette"]
-    plain = ["SingleColour", "TwoColour", "Smoke", "Singlestripe"]
-    exotic = ["Bengal", "Marbled"]
+    tabbies = ["BrokenMackerel", "Ticked", "Mackerel", "Classic", "Agouti"]
+    spotted = ["Spotted", "Rosette"]
+    plain = ["Solid", "Bicolor", "Smoke"]
+    exotic = ["Braided", "BrokenBraided", "Marbled"]
     torties = ["Tortie", "Calico"]
     pelt_categories = [tabbies, spotted, plain, exotic, torties]
 
     # SPRITE NAMES
     single_colours = [
-        'WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK', 'CREAM', 'PALEGINGER',
-        'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA', 'LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN',
-        'CHOCOLATE'
+        'GHOST', 'BLACK', 'COLDBLUE', 'WARMBLUE', 'GINGER', 'HOTGINGER', 'CHOCOLATE', 'CINNAMON', 'CREAM',
+        'LILAC', 'FAWN', 'APRICOT', 'CARMBLUE', 'CARMLILAC', 'CARMFAWN', 'SILVER', 'SILVERBLUE', 'CAMEO',
+        'SILVERCHOCOLATE', 'SILVERCINNAMON', 'SILVERCREAM', 'SILVERLILAC', 'SILVERFAWN', 'SILVERAPRICOT', 'SILVERCARMBLUE',
+        'SILVERCARMLILAC','SILVERCARMFAWN'
     ]
-    ginger_colours = ['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA']
-    black_colours = ['GREY', 'DARKGREY', 'GHOST', 'BLACK']
-    white_colours = ['WHITE', 'PALEGREY', 'SILVER']
-    brown_colours = ['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']
-    colour_categories = [ginger_colours, black_colours, white_colours, brown_colours]
+    ginger_colours = ['GINGER','HOTGINGER']
+    black_colours = ['GHOST', 'BLACK', 'CHOCOLATE', 'CINNAMON']
+    dilute_ginger_colours = ['CREAM']
+    dilute_black_colours = ['COLDBLUE', 'WARMBLUE', 'LILAC', 'FAWN']
+    mod_dilute_black_colours = ['CARMBLUE', 'CARMLILAC', 'CARMFAWN']
+    mod_dilute_ginger_colours = ['APRICOT']
+    silver_ginger_colours = ['CAMEO']
+    silver_black_colours = ['SILVER', 'SILVERCHOCOLATE', 'SILVERCINNAMON']
+    silver_dilute_ginger_colours = ['SILVERCREAM']
+    silver_dilute_black_colours = ['SILVERBLUE', 'SILVERLILAC', 'SILVERFAWN']
+    silver_mod_dilute_ginger_colours = ['SILVERAPRICOT']    
+    silver_mod_dilute_black_colours = ['SILVERCARMBLUE', 'SILVERCARMLILAC', 'SILVERCARMFAWN']
+
+
+    colour_categories = [ginger_colours, black_colours, dilute_black_colours, dilute_ginger_colours, mod_dilute_black_colours,
+                         mod_dilute_ginger_colours, silver_ginger_colours, silver_black_colours, silver_dilute_ginger_colours,
+                         silver_dilute_black_colours, silver_mod_dilute_ginger_colours, silver_mod_dilute_black_colours]
     eye_sprites = [
         'YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'BLUEYELLOW', 'BLUEGREEN',
         'GREY', 'CYAN', 'EMERALD', 'PALEBLUE', 'PALEYELLOW', 'GOLD', 'HEATHERBLUE', 'COPPER', 'SAGE', 'COBALT',
@@ -129,7 +144,7 @@ class Pelt():
 
     """Holds all appearence information for a cat. """
     def __init__(self,
-                 name:str="SingleColour",
+                 name:str="Solid",
                  length:str="short",
                  colour:str="WHITE",
                  white_patches:str=None,
@@ -429,29 +444,49 @@ class Pelt():
         if torbie:
             # If it is tortie, the chosen pelt above becomes the base pelt.
             chosen_tortie_base = chosen_pelt
-            if chosen_tortie_base in ["TwoColour", "SingleColour"]:
-                chosen_tortie_base = "Single"
+            if chosen_tortie_base in ["Bicolor", "Solid"]:
+                chosen_tortie_base = "Solid"
             chosen_tortie_base = chosen_tortie_base.lower()
             chosen_pelt = random.choice(Pelt.torties)
 
         # ------------------------------------------------------------------------------------------------------------#
         #   PELT COLOUR
         # ------------------------------------------------------------------------------------------------------------#
-        # Weights for each colour group. It goes: (ginger_colours, black_colours, white_colours, brown_colours)
-        weights = [0, 0, 0, 0]
+        # Weights for each colour group. It goes: (ginger_colours, black_colours, dilute_ginger_colours, dilute_black_colours,
+        #  mod_dilute_ginger_colours, mod_dilute_black_colours, silver_ginger_colours, silver_black_colours, silver_dilute_ginger_colours,
+        #  silver_dilute_black_colours, silver_mod_dilute_ginger_colours, silver_mod_dilute_black_colours)
+                         
+                         
+        weights = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         for p_ in par_peltcolours:
             if p_ in Pelt.ginger_colours:
-                add_weight = (40, 0, 0, 10)
+                add_weight = (40, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0)
             elif p_ in Pelt.black_colours:
-                add_weight = (0, 40, 2, 5)
-            elif p_ in Pelt.white_colours:
-                add_weight = (0, 5, 40, 0)
-            elif p_ in Pelt.brown_colours:
-                add_weight = (10, 5, 0, 35)
+                add_weight = (0, 40, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0)
+            elif p_ in Pelt.dilute_ginger_colours:
+                add_weight = (40, 0, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+            elif p_ in Pelt.dilute_black_colours:
+                add_weight = (0, 0, 40, 0, 40, 0, 0, 0, 0, 0, 0, 0)
+            elif p_ in Pelt.mod_dilute_ginger_colours:
+                add_weight = (10, 0, 20, 0, 40, 0, 0, 0, 0, 0, 0, 0)
+            elif p_ in Pelt.mod_dilute_black_colours:
+                add_weight = (0, 10, 0, 10, 0, 40, 0, 0, 0, 0, 0, 0)
+            if p_ in Pelt.silver_ginger_colours:
+                add_weight = (20, 0, 10, 0, 0, 0, 40, 0, 0, 0, 0, 0)
+            elif p_ in Pelt.silver_black_colours:
+                add_weight = (0, 20, 0, 10, 0, 0, 0, 40, 0, 0, 0, 0)
+            elif p_ in Pelt.silver_dilute_ginger_colours:
+                add_weight = (10, 0, 20, 0, 0, 0, 0, 0, 40, 0, 0, 0)
+            elif p_ in Pelt.silver_dilute_black_colours:
+                add_weight = (0, 10, 0, 20, 0, 0, 0, 0, 0, 40, 0, 0)
+            elif p_ in Pelt.silver_mod_dilute_ginger_colours:
+                add_weight = (10, 0, 20, 0, 20, 0, 10, 0, 20, 0, 40, 0)
+            elif p_ in Pelt.silver_mod_dilute_black_colours:
+                add_weight = (0, 10, 0, 20, 0, 20, 0, 10, 0, 20, 0, 40)
             elif p_ is None:
-                add_weight = (40, 40, 40, 40)
+                add_weight = (40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40)
             else:
-                add_weight = (0, 0, 0, 0)
+                add_weight = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
             for x in range(0, len(weights)):
                 weights[x] += add_weight[x]
@@ -506,11 +541,11 @@ class Pelt():
         chosen_white = random.randint(1, 100) <= chance
 
         # Adjustments to pelt chosen based on if the pelt has white in it or not.
-        if chosen_pelt in ["TwoColour", "SingleColour"]:
+        if chosen_pelt in ["Bicolor", "Solid"]:
             if chosen_white:
-                chosen_pelt = "TwoColour"
+                chosen_pelt = "Bicolor"
             else:
-                chosen_pelt = "SingleColour"
+                chosen_pelt = "Solid"
         elif chosen_pelt == "Calico":
             if not chosen_white:
                 chosen_pelt = "Tortie"
@@ -545,8 +580,8 @@ class Pelt():
         if torbie:
             # If it is tortie, the chosen pelt above becomes the base pelt.
             chosen_tortie_base = chosen_pelt
-            if chosen_tortie_base in ["TwoColour", "SingleColour"]:
-                chosen_tortie_base = "Single"
+            if chosen_tortie_base in ["Bicolor", "Solid"]:
+                chosen_tortie_base = "Solid"
             chosen_tortie_base = chosen_tortie_base.lower()
             chosen_pelt = random.choice(Pelt.torties)
 
@@ -573,11 +608,11 @@ class Pelt():
         chosen_white = random.randint(1, 100) <= 40
 
         # Adjustments to pelt chosen based on if the pelt has white in it or not.
-        if chosen_pelt in ["TwoColour", "SingleColour"]:
+        if chosen_pelt in ["Bicolor", "Solid"]:
             if chosen_white:
-                chosen_pelt = "TwoColour"
+                chosen_pelt = "Bicolor"
             else:
-                chosen_white = "SingleColour"
+                chosen_white = "Solid"
         elif chosen_pelt == "Calico":
             if not chosen_white:
                 chosen_pelt = "Tortie"
@@ -591,7 +626,7 @@ class Pelt():
     def init_pattern_color(self, parents, gender) -> bool:
         """Inits self.name, self.colour, self.length, 
             self.tortiebase and determines if the cat 
-            will have white patche or not. 
+            will have white patches or not. 
             Return TRUE is the cat should have white patches, 
             false is not. """
         
@@ -690,32 +725,42 @@ class Pelt():
 
                 else:
                     # Normal generation
-                    if self.tortiebase in ["singlestripe", "smoke", "single"]:
-                        self.tortiepattern = choice(['tabby', 'mackerel', 'classic', 'single', 'smoke', 'agouti',
-                                                    'ticked'])
+                    if self.tortiebase in ["smoke", "solid"]:
+                        self.tortiepattern = choice(['brokenmackerel', 'mackerel', 'classic', 'single',
+                                                      'smoke', 'agouti', 'ticked', 'spotted'])
                     else:
-                        self.tortiepattern = random.choices([self.tortiebase, 'single'], weights=[97, 3], k=1)[0]
-
-                    if self.colour == "WHITE":
-                        possible_colors = Pelt.white_colours.copy()
-                        possible_colors.remove("WHITE")
-                        self.colour = choice(possible_colors)
+                        self.tortiepattern = random.choices([self.tortiebase, 'solid'], weights=[97, 3], k=1)[0]
 
                     # Ginger is often duplicated to increase its chances
-                    if (self.colour in Pelt.black_colours) or (self.colour in Pelt.white_colours):
-                        self.tortiecolour = choice((Pelt.ginger_colours * 2) + Pelt.brown_colours)
+                    if self.colour in Pelt.black_colours:
+                        self.tortiecolour = choice(Pelt.ginger_colours)
                     elif self.colour in Pelt.ginger_colours:
-                        self.tortiecolour = choice(Pelt.brown_colours + Pelt.black_colours * 2)
-                    elif self.colour in Pelt.brown_colours:
-                        possible_colors = Pelt.brown_colours.copy()
-                        possible_colors.remove(self.colour)
-                        possible_colors.extend(Pelt.black_colours + (Pelt.ginger_colours * 2))
-                        self.tortiecolour = choice(possible_colors)
+                        self.tortiecolour = choice(Pelt.black_colours)
+                    elif self.colour in Pelt.dilute_black_colours:
+                        self.tortiecolour = choice(Pelt.dilute_ginger_colours)
+                    elif self.colour in Pelt.dilute_ginger_colours:
+                        self.tortiecolour = choice(Pelt.dilute_black_colours)
+                    elif self.colour in Pelt.mod_dilute_black_colours:
+                        self.tortiecolour = choice(Pelt.mod_dilute_ginger_colours)
+                    elif self.colour in Pelt.mod_dilute_ginger_colours:
+                        self.tortiecolour = choice(Pelt.mod_dilute_black_colours)
+                    if self.colour in Pelt.silver_black_colours:
+                        self.tortiecolour = choice(Pelt.silver_ginger_colours)
+                    elif self.colour in Pelt.silver_ginger_colours:
+                        self.tortiecolour = choice(Pelt.silver_black_colours)
+                    elif self.colour in Pelt.silver_dilute_black_colours:
+                        self.tortiecolour = choice(Pelt.silver_dilute_ginger_colours)
+                    elif self.colour in Pelt.silver_dilute_ginger_colours:
+                        self.tortiecolour = choice(Pelt.silver_dilute_black_colours)
+                    elif self.colour in Pelt.silver_mod_dilute_black_colours:
+                        self.tortiecolour = choice(Pelt.silver_mod_dilute_ginger_colours)
+                    elif self.colour in Pelt.silver_mod_dilute_ginger_colours:
+                        self.tortiecolour = choice(Pelt.silver_mod_dilute_black_colours)
                     else:
-                        self.tortiecolour = "GOLDEN"
+                        self.tortiecolour = "GINGER"
 
             else:
-                self.tortiecolour = "GOLDEN"
+                self.tortiecolour = "GINGER"
         else:
             self.tortiebase = None
             self.tortiepattern = None
@@ -924,50 +969,57 @@ class Pelt():
         # Define look-up dictionaries
         if short:
             renamed_colors = {
-                "white": "pale",
-                "palegrey": "gray",
-                "darkgrey": "gray",
-                "grey": "gray",
-                "paleginger": "ginger",
-                "darkginger": "ginger",
-                "sienna": "ginger",
-                "lightbrown": "brown",
-                "lilac": "brown",
-                "golden-brown": "brown",
-                "darkbrown": "brown",
-                "chocolate": "brown",
-                "ghost": "black"
+                "warmblue": "blue",
+                "coldblue": "blue",
+                "hotginger": "ginger",
+                "ghost": "black",
+                "carmblue": "blue",
+                "carmlilac": "lilac",
+                "carmfawn": "fawn",
+                "silverblue": "silver blue",
+                "silverchocolate": "silver chocolate",
+                "silvercinnamon": "silver cinnamon",
+                "silvercream": "silver cream",
+                "silverlilac": "silver lilac",
+                "silverfawn": "silver fawn",
+                "silverapricot": "silver apricot",
+                "silvercarmblue": "silver blue",
+                "silvercarmlilac": "silver lilac",
+                "silvercarmfawn": "silver fawn",
             }
         else:
             renamed_colors = {
-                "white": "pale",
-                "palegrey": "pale gray",
-                "grey": "gray",
-                "darkgrey": "dark gray",
-                "paleginger": "pale ginger",
-                "darkginger": "dark ginger",
-                "sienna": "dark ginger",
-                "lightbrown": "light brown",
-                "lilac": "light brown",
-                "golden-brown": "golden brown",
-                "darkbrown": "dark brown",
-                "chocolate": "dark brown",
-                "ghost": "black"
+                "warmblue": "blue",
+                "coldblue": "blue",
+                "hotginger": "dark ginger",
+                "ghost": "ghost",
+                "carmblue": "caramelized blue",
+                "carmlilac": "caramelized lilac",
+                "carmfawn": "caramelized fawn",
+                "silverblue": "silver blue",
+                "silverchocolate": "silver chocolate",
+                "silvercinnamon": "silver cinnamon",
+                "silvercream": "silver cream",
+                "silverlilac": "silver lilac",
+                "silverfawn": "silver fawn",
+                "silverapricot": "silver apricot",
+                "silvercarmblue": "silver caramelized blue",
+                "silvercarmlilac": "silver caramelized lilac",
+                "silvercarmfawn": "silver caramelized fawn",
             }
 
         pattern_des = {
-            "Tabby": "c_n tabby",
-            "Speckled": "speckled c_n",
-            "Bengal": "unusually dappled c_n",
-            "Marbled": "c_n tabby",
-            "Ticked": "c_n ticked",
+            "Braided": "c_n braided tabby",
+            "Spotted": "c_n spotted tabby",
+            "BrokenBraided": "c_n broken braided tabby",
+            "Marbled": "c_n marbled tabby",
+            "Ticked": "c_n ticked tabby",
             "Smoke": "c_n smoke",
-            "Mackerel": "c_n tabby",
-            "Classic": "c_n tabby",
-            "Agouti": "c_n tabby",
-            "Singlestripe": "dorsal-striped c_n",
-            "Rosette": "unusually spotted c_n",
-            "Sokoke": "c_n tabby"
+            "Mackerel": "c_n mackerel tabby",
+            "Classic": "c_n classic tabby",
+            "Agouti": "c_n fully ticked tabby",
+            "BrokenMackerel": "c_n broken mackerel tabby",
+            "Rosetted": "c_n rosetted tabby",
         }
 
         # Start with determining the base color name. 
@@ -976,7 +1028,7 @@ class Pelt():
             color_name = renamed_colors[color_name]
         
         # Replace "white" with "pale" if the cat is 
-        if cat.pelt.name not in ["SingleColour", "TwoColour", "Tortie", "Calico"] and color_name == "white":
+        if cat.pelt.name not in ["Solid", "Bicolor", "Tortie", "Calico"] and color_name == "white":
             color_name = "pale"
 
         # Time to descibe the pattern and any additional colors. 
@@ -987,15 +1039,15 @@ class Pelt():
             if short:
                 # If using short, don't add describe the colors of calicos and torties. Just call them calico, tortie, or mottled. 
                 # If using short, don't describe the colors of calicos and torties. Just call them calico, tortie, or mottled. 
-                if cat.pelt.colour in Pelt.black_colours + Pelt.brown_colours + Pelt.white_colours and \
-                    cat.pelt.tortiecolour in Pelt.black_colours + Pelt.brown_colours + Pelt.white_colours:
+                if cat.pelt.colour in Pelt.black_colours + Pelt.dilute_black_colours + Pelt.mod_dilute_black_colours and \
+                    cat.pelt.tortiecolour in Pelt.black_colours + Pelt.dilute_black_colours + Pelt.mod_dilute_black_colours:
                     color_name = "mottled"
                 else:
                     color_name = cat.pelt.name.lower()
             else:
                 base = cat.pelt.tortiebase.lower()
-                if base in Pelt.tabbies + ['bengal', 'rosette', 'speckled']:
-                    base = 'tabby'
+                if base in Pelt.tabbies + ['rosetted', 'braided', 'brokenbraided']:
+                    base = 'mackerel'
                 else:
                     base = ''
 
@@ -1004,9 +1056,9 @@ class Pelt():
                     patches_color = renamed_colors[patches_color]
                 color_name = f"{color_name}/{patches_color}"
                 
-                if cat.pelt.colour in Pelt.black_colours + Pelt.brown_colours + Pelt.white_colours and \
-                    cat.pelt.tortiecolour in Pelt.black_colours + Pelt.brown_colours + Pelt.white_colours:
-                        color_name = f"{color_name} mottled"
+                if cat.pelt.colour in Pelt.black_colours + Pelt.dilute_black_colours + Pelt.mod_dilute_black_colours and \
+                    cat.pelt.tortiecolour in Pelt.black_colours + Pelt.dilute_black_colours + Pelt.mod_dilute_black_colours:
+                    color_name = "mottled"
                 else:
                     color_name = f"{color_name} {cat.pelt.name.lower()}"
 
@@ -1023,6 +1075,8 @@ class Pelt():
             color_name = f"{color_name} point"
             if "ginger point" in color_name:
                 color_name.replace("ginger point", "flame point")
+            if "dark ginger point" in color_name:
+                color_name.replace("dark ginger point", "flame point")
 
         if "white and white" in color_name:
             color_name = color_name.replace("white and white", "white")
