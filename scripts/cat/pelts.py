@@ -89,7 +89,7 @@ class Pelt():
     ]
 
     tabbies = ["BrokenMackerel", "Ticked", "Mackerel", "Classic", "Agouti"]
-    spotted = ["Spotted", "Rosette"]
+    spotted = ["Spotted", "Rosetted"]
     plain = ["Solid", "Bicolor", "Smoke"]
     exotic = ["Braided", "BrokenBraided", "Marbled"]
     torties = ["Tortie", "Calico"]
