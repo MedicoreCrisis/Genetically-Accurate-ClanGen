@@ -249,7 +249,7 @@ class Pelt():
         if self.tortiepattern and "tortie" in self.tortiepattern:
             self.tortiepattern = sub("tortie", "", self.tortiepattern.lower())
             if self.tortiepattern == "solid":
-                self.tortiepattern = "single"
+                self.tortiepattern = "solid"
                 
         if self.white_patches in convert_dict["old_creamy_patches"]:
             self.white_patches = convert_dict["old_creamy_patches"][self.white_patches]
@@ -726,7 +726,7 @@ class Pelt():
                 else:
                     # Normal generation
                     if self.tortiebase in ["smoke", "solid"]:
-                        self.tortiepattern = choice(['brokenmackerel', 'mackerel', 'classic', 'single',
+                        self.tortiepattern = choice(['brokenmackerel', 'mackerel', 'classic', 'solid',
                                                       'smoke', 'agouti', 'ticked', 'spotted'])
                     else:
                         self.tortiepattern = random.choices([self.tortiebase, 'solid'], weights=[97, 3], k=1)[0]
