@@ -302,7 +302,7 @@ for a, i in enumerate(['SILVERLILAC', 'SILVERBFAWN', 'SILVERAPRICOT', 'SILVERCAR
     sprites.make_group('smokecolours', (a, 3), f'smoke{i}')
 # ticked
 for a, i in enumerate(['GHOST', 'BLACK', 'COLDBLUE', 'WARMBLUE', 'GINGER', 'HOTGINGER', 'CHOCOLATE', 'CINNAMON']):
-    sprites.make_group('tickedolours', (a, 0), f'ticked{i}')
+    sprites.make_group('tickedcolours', (a, 0), f'ticked{i}')
 for a, i in enumerate(['CREAM', 'LILAC', 'FAWN', 'APRICOT', 'CARMBLUE', 'CARMLILAC', 'CARMFAWN']):
     sprites.make_group('tickedcolours', (a, 1), f'ticked{i}')
 for a, i in enumerate(['SILVER', 'SILVERBLUE', 'CAMEO', 'SILVERCHOCOLATE', 'SILVERCINNAMON', 'SILVERCREAM']):
