@@ -1285,8 +1285,8 @@ def generate_sprite(cat, life_state=None, scars_hidden=False, acc_hidden=False, 
                 (0, 0))
 
             # Create the patch image
-            if cat.pelt.tortiepattern == "Single":
-                tortie_pattern = "SingleColour"
+            if cat.pelt.tortiepattern == "Solid":
+                tortie_pattern = "Solid"
             else:
                 tortie_pattern = cat.pelt.tortiepattern
 
