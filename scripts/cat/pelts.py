@@ -744,7 +744,7 @@ class Pelt():
                         self.tortiecolour = choice(Pelt.mod_dilute_ginger_colours)
                     elif self.colour in Pelt.mod_dilute_ginger_colours:
                         self.tortiecolour = choice(Pelt.mod_dilute_black_colours)
-                    if self.colour in Pelt.silver_black_colours:
+                    elif self.colour in Pelt.silver_black_colours:
                         self.tortiecolour = choice(Pelt.silver_ginger_colours)
                     elif self.colour in Pelt.silver_ginger_colours:
                         self.tortiecolour = choice(Pelt.silver_black_colours)
