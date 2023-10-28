@@ -309,7 +309,7 @@ class SettingsScreen(Screens):
         self.checkboxes_text['instr'] = pygame_gui.elements.UITextBox(
             "Change the general settings of your game here.\n"""
             """More settings are available in the settings page of your Clan.""",
-            scale(pygame.Rect((200, 320), (1200, 100))),
+            scale(pygame.Rect((200, 320), (1200, 200))),
             object_id=get_text_box_theme("#text_box_30_horizcenter"),
             manager=MANAGER)
 
