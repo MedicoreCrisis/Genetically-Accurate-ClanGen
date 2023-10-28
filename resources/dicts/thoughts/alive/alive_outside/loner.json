@@ -32,7 +32,7 @@
             "Took a stroll through the city",
             "Spies a kittypet through a window, jealous of the protection and food they have",
             "Spies a kittypet and taunts them that they can't enjoy freedom",
-            "Is takking a nap, hoping something exciting would happen so to escape {PRONOUN/m_c/poss} boredom",
+            "Is taking a nap, hoping something exciting would happen to escape {PRONOUN/m_c/poss} boredom",
             "Was running carelessly across the Thunderpath and was nearly hit by a monster"
         ]
     },
@@ -116,7 +116,7 @@
             "Is glad {PRONOUN/m_c/subject} chose this life of freedom",
             "Thinks about old friends",
             "Hopes it isn't too late to join a Clan",
-            "Wonders where {PRONOUN/m_c/subject}'ll go when {PRONOUN/m_c/subject} die",
+            "Wonders where {PRONOUN/m_c/subject}'ll go when {PRONOUN/m_c/subject} {VERB/m_c/die/dies}",
             "Is telling stories about {PRONOUN/m_c/poss} younger days",
             "Licks {PRONOUN/m_c/poss} sore pawpads from travelling too long",
             "Is admiring the massive territory {PRONOUN/m_c/subject} secured for so long",
